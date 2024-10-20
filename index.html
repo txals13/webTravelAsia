@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tropical Asia Travel</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            background-image: url('/assets/images/tropicalBeachBackground.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .destination-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .offbeat-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Tropical Asia Travel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#destinations">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div>
+            <h1>Discover Tropical Asia</h1>
+            <p>Explore breathtaking destinations across Asia and off-the-beaten-path locations.</p>
+            <a href="#destinations" class="btn btn-primary btn-lg">Start Your Adventure</a>
+        </div>
+    </div>
+
+  <!-- Destinations Section -->
+    <section id="destinations" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Top Tropical Destinations</h2>
+            <div class="row justify-content-center">
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="assets/images/maldives.jpg" class="card-img-top destination-img" alt="Maldives">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Maldives</h5>
+                            <p class="card-text">White sand beaches, turquoise waters, and vibrant marine life await you in the Maldives.</p>
+                            <div class="mt-auto">
+                                <a href="pages/maldives-details.html" class="btn btn-primary w-100">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="assets/images/thailand.jpg" class="card-img-top destination-img" alt="Thailand">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Thailand</h5>
+                            <p class="card-text">Experience the stunning islands of Thailand, from Phuket to Koh Samui.</p>
+                            <div class="mt-auto">
+                                <a href="pages/thailand-details.html" class="btn btn-primary w-100">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="assets/images/bali.jpg" class="card-img-top destination-img" alt="Bali">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Bali, Indonesia</h5>
+                            <p class="card-text">Immerse yourself in Bali's unique culture, lush jungles, and pristine beaches.</p>
+                            <div class="mt-auto">
+                                <a href="pages/bali-details.html" class="btn btn-primary w-100">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>   
+
+    <!-- Off-the-beaten-track Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Off the Beaten Track</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-sm-12">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="assets/images/laos.jpg" class="card-img-top offbeat-img" alt="Laos">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Laos</h5>
+                            <p class="card-text">Discover the untouched beauty of Laos, from hidden waterfalls to lush forests.</p>
+                            <div class="mt-auto">
+                                <a href="pages/laos-details.html" class="btn btn-outline-dark w-100">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="assets/images/vietnam.jpg" class="card-img-top offbeat-img" alt="Vietnam">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Vietnam</h5>
+                            <p class="card-text">Explore Vietnam's charming countryside, from the Mekong Delta to the hidden caves of Phong Nha.</p>
+                            <div class="mt-auto">
+                                <a href="pages/vietnam-details.html" class="btn btn-outline-dark w-100">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indonesia Card -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="assets/images/indonesia.jpg" class="card-img-top offbeat-img" alt="Indonesia">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Indonesia</h5>
+                            <p class="card-text">Explore the stunning islands, volcanoes, and cultural treasures of Indonesia.</p>
+                            <div class="mt-auto">
+                                <a href="pages/indonesia-details.html" class="btn btn-outline-dark w-100">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Philippines Card -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="assets/images/philippines.jpg" class="card-img-top offbeat-img" alt="Philippines">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Philippines</h5>
+                            <p class="card-text">Discover pristine beaches, hidden lagoons, and vibrant local culture in the Philippines.</p>
+                            <div class="mt-auto">
+                                <a href="pages/philippines-details.html" class="btn btn-outline-dark w-100">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Off-the-beaten-track Section
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Off the Beaten Track</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-sm-12">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="assets/images/laos.jpg" class="card-img-top offbeat-img" alt="Laos">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Laos</h5>
+                            <p class="card-text">Discover the untouched beauty of Laos, from hidden waterfalls to lush forests.</p>
+                            <div class="mt-auto">
+                                <a href="pages/laos-details.html" class="btn btn-outline-dark w-100">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="assets/images/vietnam.jpg" class="card-img-top offbeat-img" alt="Vietnam">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Vietnam</h5>
+                            <p class="card-text">Explore Vietnam's charming countryside, from the Mekong Delta to the hidden caves of Phong Nha.</p>
+                            <div class="mt-auto">
+                                <a href="pages/vietnam-details.html" class="btn btn-outline-dark w-100">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="assets/images/indonesia.jpg" class="card-img-top offbeat-img" alt="Indonesia">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Indonesia</h5>
+                            <p class="card-text">Explore Vietnam's charming countryside, from the Mekong Delta to the hidden caves of Phong Nha.</p>
+                            <div class="mt-auto">
+                                <a href="pages/indonesia-details.html" class="btn btn-outline-dark w-100">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">What Our Travelers Say</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <blockquote class="blockquote">
+                                <p>"An unforgettable trip to Thailand! Everything was perfectly organized, and the beaches were stunning."</p>
+                                <footer class="blockquote-footer">Anna, USA</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <blockquote class="blockquote">
+                                <p>"Bali exceeded my expectations! Thank you for an amazing adventure!"</p>
+                                <footer class="blockquote-footer">John, Australia</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <blockquote class="blockquote">
+                                <p>"Laos was a hidden gem! We can't wait to go back!"</p>
+                                <footer class="blockquote-footer">Maria, Spain</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+        <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Get in Touch</h2>
+            <form id="contactForm" action="https://formspree.io/f/mkgngnpe" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Your Email</label>
+                    <input type="email" class="form-control" id="email" name="_replyto" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="3" placeholder="Your message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+
+            <!-- Success and Error Messages -->
+            <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
+                Your message has been sent successfully!
+            </div>
+            <div id="errorMessage" class="alert alert-danger mt-3" style="display: none;">
+                There was an error submitting the form. Please try again.
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            // Send the form data using the fetch API
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Show success message
+                    document.getElementById('successMessage').style.display = 'block';
+                    document.getElementById('errorMessage').style.display = 'none';
+
+                    // Reset the form
+                    form.reset();
+                } else {
+                    // Show error message
+                    document.getElementById('errorMessage').style.display = 'block';
+                    document.getElementById('successMessage').style.display = 'none';
+                }
+            }).catch(error => {
+                // Show error message if fetch fails
+                document.getElementById('errorMessage').style.display = 'block';
+                document.getElementById('successMessage').style.display = 'none';
+            });
+        });
+    </script>
+
+        <!-- Success Message Placeholder -->
+        <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
+            Your message has been sent successfully!
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Tropical Asia Travel. All rights reserved.</p>
+            <a href="#" class="text-white mx-2">Facebook</a>
+            <a href="#" class="text-white mx-2">Instagram</a>
+            <a href="#" class="text-white mx-2">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
