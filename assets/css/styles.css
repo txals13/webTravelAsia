@@ -1,0 +1,27 @@
+/* Custom CSS for the contact form and success/error messages */
+#successMessage, #errorMessage {
+    display: none;
+}
+    .hero {
+        background-image: url('/assets/images/tropicalBeachBackground.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+    }
+
+    .destination-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .offbeat-img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
