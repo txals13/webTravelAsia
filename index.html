@@ -87,6 +87,7 @@
                             <p class="card-text">White sand beaches, turquoise waters, and vibrant marine life await you in the Maldives.</p>
                             <div class="mt-auto">
                                 <a href="pages/maldives-details.html" class="btn btn-primary w-100">Learn More</a>
+                                <button class="btn btn-success mt-2 w-100" data-bs-toggle="modal" data-bs-target="#bookModal" data-destination="Maldives">Book Now</button>
                             </div>
                         </div>
                     </div>
@@ -100,6 +101,7 @@
                             <p class="card-text">Experience the stunning islands of Thailand, from Phuket to Koh Samui.</p>
                             <div class="mt-auto">
                                 <a href="pages/thailand-details.html" class="btn btn-primary w-100">Learn More</a>
+                                <button class="btn btn-success mt-2 w-100" data-bs-toggle="modal" data-bs-target="#bookModal" data-destination="Thailand">Book Now</button>
                             </div>
                         </div>
                     </div>
@@ -113,6 +115,7 @@
                             <p class="card-text">Immerse yourself in Bali's unique culture, lush jungles, and pristine beaches.</p>
                             <div class="mt-auto">
                                 <a href="pages/bali-details.html" class="btn btn-primary w-100">Learn More</a>
+                                <button class="btn btn-success mt-2 w-100" data-bs-toggle="modal" data-bs-target="#bookModal" data-destination="Bali">Book Now</button>
                             </div>
                         </div>
                     </div>
@@ -134,6 +137,7 @@
                             <p class="card-text">Discover the untouched beauty of Laos, from hidden waterfalls to lush forests.</p>
                             <div class="mt-auto">
                                 <a href="pages/laos-details.html" class="btn btn-outline-dark w-100">Learn More</a>
+                                <button class="btn btn-success mt-2 w-100" data-bs-toggle="modal" data-bs-target="#bookModal" data-destination="Laos">Book Now</button>
                             </div>
                         </div>
                     </div>
@@ -147,6 +151,7 @@
                             <p class="card-text">Explore Vietnam's charming countryside, from the Mekong Delta to the hidden caves of Phong Nha.</p>
                             <div class="mt-auto">
                                 <a href="pages/vietnam-details.html" class="btn btn-outline-dark w-100">Learn More</a>
+                                <button class="btn btn-success mt-2 w-100" data-bs-toggle="modal" data-bs-target="#bookModal" data-destination="Vietnam">Book Now</button>
                             </div>
                         </div>
                     </div>
@@ -161,6 +166,7 @@
                             <p class="card-text">Explore the stunning islands, volcanoes, and cultural treasures of Indonesia.</p>
                             <div class="mt-auto">
                                 <a href="pages/indonesia-details.html" class="btn btn-outline-dark w-100">Learn More</a>
+                                <button class="btn btn-success mt-2 w-100" data-bs-toggle="modal" data-bs-target="#bookModal" data-destination="Indonesia">Book Now</button>
                             </div>
                         </div>
                     </div>
@@ -175,6 +181,7 @@
                             <p class="card-text">Discover pristine beaches, hidden lagoons, and vibrant local culture in the Philippines.</p>
                             <div class="mt-auto">
                                 <a href="pages/philippines-details.html" class="btn btn-outline-dark w-100">Learn More</a>
+                                <button class="btn btn-success mt-2 w-100" data-bs-toggle="modal" data-bs-target="#bookModal" data-destination="Philippines">Book Now</button>
                             </div>
                         </div>
                     </div>
@@ -356,6 +363,83 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Other content, sections, and scripts -->
+
+<!-- Booking Modal -->
+<div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bookModalLabel">Book Your Trip</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="bookingForm">
+                    <div class="mb-3">
+                        <label for="destination" class="form-label">Destination</label>
+                        <input type="text" class="form-control" id="destination" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="travelDate" class="form-label">Travel Date</label>
+                        <input type="date" class="form-control" id="travelDate" name="travelDate" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Confirm Booking</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Existing Bootstrap JS and other scripts -->
+<script>
+    // Populate modal with destination name when Book Now is clicked
+    document.querySelectorAll('.btn-success').forEach(button => {
+        button.addEventListener('click', function() {
+            const destination = this.getAttribute('data-destination');
+            document.getElementById('destination').value = destination;
+        });
+    });
+
+    // Handle form submission
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const formData = new FormData(this);
+        const destination = formData.get('destination');
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const travelDate = formData.get('travelDate');
+        
+        // For simplicity, just logging the data (replace this with an API call)
+        console.log({
+            destination,
+            name,
+            email,
+            travelDate
+        });
+
+        // Close the modal
+        const modal = bootstrap.Modal.getInstance(document.getElementById('bookModal'));
+        modal.hide();
+
+        // Optionally, show a success message or redirect the user
+        alert('Your trip has been booked successfully!');
+    });
+</script>
+
 </body>
+</html>
+
+</body>
+
 
 </html>
