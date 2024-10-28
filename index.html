@@ -370,10 +370,12 @@
         event.preventDefault();
         
         const formData = new FormData(this);
-        const destination = formData.get('destination');
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const travelDate = formData.get('travelDate');
+        const data = {
+            destination: document.getElementById('destination').value,
+            name: formData.get('name'),
+            email: formData.get('email'),
+            travelDate: formData.get('travelDate')
+        };
         
         // For simplicity, just logging the data (replace this with an API call)
         console.log({
@@ -383,13 +385,34 @@
             travelDate
         });
 
+        // Send data to Flask backend
+    const response = await fetch('/submit_booking', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+        alert('Your trip has been booked successfully!');
+        // Optionally, reset the form fields
+        this.reset();
         // Close the modal
         const modal = bootstrap.Modal.getInstance(document.getElementById('bookModal'));
         modal.hide();
+    } else {
+        alert('There was an error booking your trip. Please try again.');
+    }
+});
 
-        // Optionally, show a success message or redirect the user
-        alert('Your trip has been booked successfully!');
-    });
+    //     // Close the modal
+    //     const modal = bootstrap.Modal.getInstance(document.getElementById('bookModal'));
+    //     modal.hide();
+
+    //     // Optionally, show a success message or redirect the user
+    //     alert('Your trip has been booked successfully!');
+    // });
 </script>
 
 </body>
